@@ -1,0 +1,1380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>ELCINA e-Fortnightly Newsletter</title>
+
+  <!-- Exo 2 Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+  <!-- Newsletter Stylesheet -->
+  <link rel="stylesheet" href="css/newsletter.css">
+</head>
+	
+	<script>
+  function handleAccordions() {
+    const sections = document.querySelectorAll('details.subsection');
+    if (window.innerWidth > 768) {
+      sections.forEach(s => s.setAttribute('open', ''));
+    } else {
+      sections.forEach(s => s.removeAttribute('open'));
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', handleAccordions);
+  window.addEventListener('resize', handleAccordions);
+		
+		function initScrollSpy() {
+  const links = document.querySelectorAll('.toc-list a');
+const sections = document.querySelectorAll('details.subsection, div.subsection,section.newsletter-section');
+
+  window.addEventListener('scroll', () => {
+    let current = '';
+
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 100;
+      if (window.scrollY >= sectionTop) {
+        current = section.id;
+      }
+    });
+
+    links.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === `#${current}`) {
+        link.classList.add('active');
+      }
+    });
+  });
+}
+
+document.addEventListener('DOMContentLoaded', initScrollSpy);
+		
+		
+</script>
+	
+<body>
+
+  <!-- MASTHEAD -->
+<header id="masthead">
+  <div id="top" class="masthead-inner">
+    <img src="images/misc/elcina-banner-24.jpg" alt="ELCINA Newsletter Banner" id="masthead-banner">
+    <div class="masthead-meta-bar">
+      <p class="newsletter-meta">VOL XXVII, ISSUE 10&nbsp; |&nbsp; 15-31 May 2026</p>
+      <div class="masthead-buttons">
+        <a href="https://elcina.com" class="masthead-btn">ELCINA</a>
+        <a href="#" class="masthead-btn masthead-btn-subscribe">Subscribe</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+  <!-- NAVIGATION BAR -->
+  <nav id="nav-bar">
+    <div class="nav-inner">
+
+      <!-- HAMBURGER BUTTON (mobile only) -->
+      <button id="hamburger" aria-label="Toggle menu" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- NAV LINKS -->
+      <div id="nav-links">
+        <a href="#top-stories">Top Stories</a>
+        <a href="#policy-scan">Policy Scan</a>
+        <div class="nav-item dropdown">
+          <a href="#industry-scan">Industry Scan ▾</a>
+          <div class="dropdown-menu">
+            <a href="#general">General</a>
+			<a href="#semiconductors">Semiconductors</a>
+            <a href="#information-technology">Information Technology</a>
+            <a href="#consumer-electronics">Consumer Electronics</a>
+            <a href="#telecom">Telecom</a>
+            <a href="#evs-auto">EVs &amp; Auto Electronics</a>
+            <a href="#defence-solar">Defence &amp; Solar</a>
+            <a href="#msme">MSME</a>
+          </div>
+        </div>
+<!--         <a href="#perspective">Perspective</a>     PERSPECTIVE -->
+        <a href="#publications">Publications</a>
+        <a href="#elcina-events">ELCINA Events</a>
+<div class="nav-item dropdown">
+<a href="#upcoming-events">Upcoming Events ▾</a>
+          <div class="dropdown-menu">
+            <a href="#domestic-events">Domestic Events</a>
+            <a href="#overseas-shows">Overseas Shows</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- HERO BANNER -->
+  <section id="hero">
+    <div class="hero-inner">
+      <a href="https://sourceindia-electronics.com" target="_blank">
+        <img src="images/ses-image.jpg" alt="Source India" id="hero-banner" />
+      </a>
+    </div>
+  </section>
+
+<!-- EVENT BANNER TICKER 
+<div id="event-banner">
+  <div class="event-banner-inner">
+    <div class="event-banner-text">
+      <a href="#upcoming-events" class="event-banner-link">
+        🗓 UPCOMING ELCINA EVENTS — Convergence India Expo — 23-25 March 2026, New Delhi &nbsp;&nbsp;|&nbsp;&nbsp; 
+        Electronica India — 08-10 April 2026, Greater Noida &nbsp;&nbsp;|&nbsp;&nbsp;
+        India Electronics Week — 13-15 May 2026, Bengaluru
+      </a>
+    </div>
+  </div>
+</div>
+-->
+	
+	
+  <!-- MAIN WRAPPER: Content + Sidebar -->
+  <div id="wrapper">
+
+    <!-- MAIN CONTENT -->
+    <main id="main-content">
+		
+<!-- PLACEHOLDER FOR MOBILE FEATURED SPONSORS -->
+<div id="featured-sponsors-placeholder"></div>
+
+		
+		<!-- EVENT ADVERT -->
+<div class="content-advert-row">
+  <a href="#" target="_blank" rel="noopener noreferrer">
+    <img src="images/adverts/01-Source-India-16-31-May-2026.jpg" alt="Event 1" class="content-advert-img">
+  </a>
+<!-- DISABLED 
+	<a href="#" target="_blank" rel="noopener noreferrer">
+    <img src="images/adverts/virtual-workshop.jpg" alt="Event 2" class="content-advert-img">
+  </a>-->
+</div>
+			
+<hr>
+		
+<!-- EVENT ADVERT -->
+<div class="content-advert-row">
+  <a href="#" target="_blank" rel="noopener noreferrer">
+    <img src="images/adverts/ses-2026.jpg" alt="Event 1" class="content-advert-img">
+  </a>
+	<!-- ADVERT DISABLED 
+  <a href="#" target="_blank" rel="noopener noreferrer">
+    <img src="images/adverts/virtual-workshop.jpg" alt="Event 2" class="content-advert-img">
+  </a>-->
+</div>
+		
+		
+      <!-- ========================
+           SECTION 01: TOP STORIES
+           ======================== -->
+      <section class="newsletter-section" id="top-stories"> 
+        <h2 class="section-title">TOP STORIES</h2>
+
+        
+<!-- >>>>>>>>>>>>>> TOP STORIES SECTION CONTENT STARTS HERE -->		  
+		  
+<article class="news-article">
+<h3 class="article-heading">The semiconductor push behind PM Modi’s Netherlands visit</h3>
+<p class="article-meta">The Indian Express &nbsp;|&nbsp; 19 May 2026</p>
+<p>
+<img src="images/news/the-semiconductor-push.jpg" alt="" class="article-img-left">
+PM Modi’s visit to the Netherlands highlighted the strategic alignment between India’s tech goals and the Dutch semiconductor expertise. Semiconductors, now pivotal in global power dynamics, influence economic strength, military prowess, AI, and digital autonomy. Central to this partnership is ASML, the Dutch leader in the global chip market, holding a near monopoly on extreme ultraviolet (EUV) lithography machines essential for advanced chip production. This positions the Netherlands as a key player in the US-China tech rivalry.</p>
+<a href="https://indianexpress.com/article/opinion/columns/modi-netherlands-visit-semiconductor-power-play-asml-tata-10695861/" target="_blank" class="read-more">Read More &rarr;</a>
+</article>
+
+<hr>
+<article class="news-article">
+<h3 class="article-heading">Lava to invest ₹1,100 cr to boost electronics components manufacturing</h3>
+<p class="article-meta">The Hindu Business Line &nbsp;|&nbsp; 21 May 2026</p>
+<p>
+Lava International, a home-grown mobile phone manufacturer, plans to invest ₹1,100 crore over the next five years to expand its presence in the electronics components ecosystem. According to Sanjeev Agarwal, Lava’s Executive Director and Chief Manufacturing Officer, the company has set up a new mobile charger facility as part of this diversification effort. Lava currently has the capacity to produce 4 crore mobile phones and aims to manufacture all critical components in-house to enhance value addition.</p>
+<a href="https://www.thehindubusinessline.com/info-tech/lava-to-invest-1100-cr-to-boost-electronics-components-manufacturing/article71005891.ece" target="_blank" class="read-more">Read More &rarr;</a>
+</article>
+
+<hr>
+<article class="news-article">
+<h3 class="article-heading">China's new supply chain rules may hit India's electronics manufacturing push: Industry</h3>
+<p class="article-meta">The Times of India &nbsp;|&nbsp; 21 May 2026</p>
+<p>
+<img src="images/news/chinas-new-supply.jpg" alt="" class="article-img-left">
+China’s new supply chain control rules, introduced in April via decrees 834 and 835, may disrupt India’s electronics manufacturing ambitions. Industry executives warn the measures could affect supply chain stability, investments, exports, and joint ventures, particularly impacting global brands like Apple and domestic firms reliant on Chinese components and equipment. The rules expand Chinese regulators’ powers, restrict information gathering, and allow personal sanctions on decision-makers approving diversification to India. Indian manufacturers have approached the government for urgent support amid potential inter-ministerial consultations.</p>
+<a href="https://timesofindia.indiatimes.com/business/india-business/chinas-new-supply-chain-rules-may-hit-indias-electronics-manufacturing-push-industry/articleshow/131244367.cms" target="_blank" class="read-more">Read More &rarr;</a>
+</article>
+
+<hr>
+<article class="news-article">
+<h3 class="article-heading">India Strengthens Semiconductor Ecosystem with Investor Support Portal, New Facilities, and Strategic Investments</h3>
+<p class="article-meta">Express Computer &nbsp;|&nbsp; 28 May 2026</p>
+<p>
+<img src="images/news/india-strengthens-semiconductor.jpg" alt="" class="article-img-left">
+The India Semiconductor Mission (ISM) launched an “Investors Support” portal on 26 May 2026 to aid investors with information on government schemes and policies under the Semicon India Programme. This initiative aims to position India as a global semiconductor hub. Additionally, Rajasthan’s first semiconductor plant, the ELCINA Electronics Manufacturing Cluster at Salarpur, Bhiwadi, was inaugurated virtually by Union Minister Ashwini Vaishnaw. The 50.3-acre cluster, costing ₹46.09 crore, has attracted over ₹1,200 crore in investments, creating more than 2,700 jobs.</p>
+<a href="https://www.expresscomputer.in/egov-watch/india-strengthens-semiconductor-ecosystem-with-investor-support-portal-new-facilities-and-strategic-investments/135491/" target="_blank" class="read-more">Read More &rarr;</a>
+</article>
+
+<hr>
+<article class="news-article">
+<h3 class="article-heading">India's semiconductor push gets major boost with $3.3 bn Odisha deal with Intel &amp; 3D Glass Solutions</h3>
+<p class="article-meta">The Economic Times &nbsp;|&nbsp; 29 May 2026</p>
+<p>
+India’s semiconductor ambitions received a boost with a tripartite MoU signed on May 29 between the Odisha government, Intel Corporation, and 3D Glass Solutions Inc to establish an advanced packaging glass core substrate manufacturing facility in Odisha. The $3.3 billion project, located in the Bhubaneswar-Khurda region, is among India’s largest high-tech investments. Electronics and IT Minister Ashwini Vaishnaw highlighted the alignment with India’s semiconductor strategy, noting growing global industry confidence and recent partnerships with companies like Applied Materials and ASML.</p>
+<a href="https://economictimes.indiatimes.com/industry/cons-products/electronics/indias-semiconductor-push-gets-major-boost-with-3-3-bn-deal-for-new-odisha-substrate-project/articleshow/131389497.cms" target="_blank" class="read-more">Read More &rarr;</a>
+</article>
+
+<hr>
+<article class="news-article">
+<h3 class="article-heading">PLI 2.0: India bets big on making more of the smartphone at home</h3>
+<p class="article-meta">The Economic Times &nbsp;|&nbsp; 29 May 2026</p>
+<p>
+India’s updated PLI 2.0 scheme for mobile phones targets over 55% domestic value addition, aligning with the ₹40,000 crore Electronic Component Manufacturing Scheme to boost local sourcing and reduce import reliance on high-value parts like displays, camera modules, and chipsets. The finance ministry seeks incentives tied to localisation and backward integration. With cumulative investments of ₹17,519 crore and exports of ₹6.27 lakh crore, the scheme aims to foster a robust manufacturing ecosystem and strengthen India’s position as a global smartphone hub.</p>
+<a href="https://economictimes.indiatimes.com/industry/cons-products/electronics/pli-2-0-india-bets-big-on-making-more-of-the-smartphone-at-home/articleshow/131377314.cms" target="_blank" class="read-more">Read More &rarr;</a>
+</article>
+
+<hr>
+
+<!-- TOP STORIES SECTION CONTENT ENDS HERE <<<<<<<<<<<<<<<<<< -->
+
+<div class="back-to-top-wrap">
+  <a href="#top" class="back-to-top">Top &#8593;</a>
+</div>
+  
+</section>
+
+
+		<!-- EVENT ADVERT -->
+<!-- DISABLED 
+<div class="content-advert-row">
+  <a href="#" target="_blank" rel="noopener noreferrer">
+    <img src="images/adverts/source-india-portal.png" alt="Event 1" class="content-advert-img">
+  </a>
+ 
+	<a href="#" target="_blank" rel="noopener noreferrer">
+    <img src="images/adverts/virtual-workshop.jpg" alt="Event 2" class="content-advert-img">
+  </a>
+</div>
+-->
+		
+		
+<hr class="section-divider">
+		
+		
+      <!-- ========================
+           SECTION 02: POLICY SCAN
+           ======================== -->
+      <section class="newsletter-section" id="policy-scan">
+        <h2 class="section-title">POLICY SCAN</h2>
+
+<!-- >>>>>>>>>>>>>> POLICY SCAN SECTION CONTENT STARTS HERE -->		  
+
+<article class="policy-update">
+<h3 class="policy-heading">Import Policy Tightened for Certain Silver Bars</h3>
+<p>The import policy for specified categories of silver bars has been changed from “Free” to “Restricted” with immediate effect. Imports of these products will now be subject to prescribed conditions and approvals under the foreign trade policy framework.</p>
+<p class="policy-meta">Ministry of Commerce and Industry, Department of Commerce, DGFT &nbsp;|&nbsp; CG-DL-E-16052026-272636 &nbsp;|&nbsp; 16 May 2026</p>
+<a href="https://egazette.gov.in/WriteReadData/2026/272636.pdf" target="_blank" class="read-more">Read More &rarr;</a>
+</article>
+<hr>
+
+<article class="policy-update">
+<h3 class="policy-heading">BIS Issues Amendments to Room Air Conditioner Standards</h3>
+<p>BIS has notified Amendment No. 1 to the Indian Standards for unitary and split room air conditioners. The existing versions of these standards will remain valid until November 14, 2026, after which compliance with the amended standards will be required.</p>
+<p class="policy-meta">Bureau of Indian Standards, Department of Consumer Affairs &nbsp;|&nbsp; CG-DL-E-25052026-272849 &nbsp;|&nbsp; 18 May 2026</p>
+<a href="https://egazette.gov.in/(S(x3muc5ulsh4qabcziul3z23r))/ViewPDF.aspx" target="_blank" class="read-more">Read More &rarr;</a>
+</article>
+<hr>
+
+<article class="policy-update">
+<h3 class="policy-heading">Transition to New BIS Safety Standard for AV and ICT Products</h3>
+<p>AV and ICT products under the BIS Compulsory Registration Scheme will transition from existing safety standards to the new hazard-based standard IS/IEC 62368-1:2023 by November 1, 2028. During the transition period, both old and new standards will remain valid, but manufacturers are required to progressively shift their products to the new standard using updated test reports and prescribed guidelines.</p>
+<p class="policy-meta">MeitY, Iphw Division &nbsp;|&nbsp; W-47/34/2025-IPHW &nbsp;|&nbsp; 20 May 2026</p>
+<a href="https://worldtradescanner.com/IS-IEC%2062368-%20Series%20guidelines-Approved.pdf" target="_blank" class="read-more">Read More &rarr;</a>
+</article>
+<hr>
+
+<article class="policy-update">
+<h3 class="policy-heading">BHAVYA Operational Guidelines Released</h3>
+<p>DPIIT has released the operational guidelines for the BHAVYA scheme, a ₹33,660 crore initiative to develop 100 investment-ready industrial parks over six years. The scheme aims to create plug-and-play manufacturing infrastructure with strong logistics connectivity and modern utilities, with parks to be selected through a competitive process and implemented through dedicated SPVs supported by NICDC.</p>
+<p class="policy-meta">Ministry of Commerce and Industry, DPIIT &nbsp;|&nbsp; 32026/2/2024-MIIUS &nbsp;|&nbsp; 23 May 2026</p>
+<a href="https://www.dpiit.gov.in/static/uploads/2026/05/56bdc6d167272593fbeae8b4c44d6cc4.pdf" target="_blank" class="read-more">Read More &rarr;</a>
+</article>
+<hr>
+
+<article class="policy-update">
+<h3 class="policy-heading">ISM Launches Investor Support Portal for Semiconductor Sector</h3>
+<p>India Semiconductor Mission (ISM) has launched an online Investor Support portal to assist existing and prospective investors in the semiconductor ecosystem. The platform provides information on schemes, policies, approved projects, and regulatory requirements, while also enabling investors to raise and track grievances through a coordinated single-window mechanism involving central and state stakeholders.</p>
+<p class="policy-meta">Meity &nbsp;|&nbsp;  26 May 2026</p>
+<a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2265285&reg=3&lang=1" target="_blank" class="read-more">Read More &rarr;</a>
+</article>
+<hr>
+
+<article class="policy-update">
+<h3 class="policy-heading">India–Nordic Summit Strengthens Green Technology and Innovation Cooperation</h3>
+<p>The Third India–Nordic Summit elevated cooperation with the Nordic countries through a Green Technology and Innovation Strategic Partnership. Key areas of collaboration include clean energy, climate action, sustainable technologies, STEM research, next-generation telecom technologies, digital infrastructure, maritime cooperation, and trade. The partnership also supports collaboration on Arctic research and environmental sustainability.</p>
+<p class="policy-meta"> 26 May 2026</p>
+<a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2265299&reg=3&lang=2" target="_blank" class="read-more">Read More &rarr;</a>
+</article>
+
+
+<!-- POLICY SCAN SECTION CONTENT ENDS HERE <<<<<<<<<<< -->		  
+
+</section>
+
+<div class="back-to-top-wrap">
+  <a href="#top" class="back-to-top">Top &#8593;</a>
+</div>
+		
+      <hr class="section-divider">
+
+      <!-- ========================
+           SECTION 03: INDUSTRY SCAN
+           WITH SUBSECTIONS
+           ======================== -->
+      <section class="newsletter-section" id="industry-scan">
+        <h2 class="section-title">INDUSTRY SCAN</h2>
+
+<!-- Subsection: General -->
+
+<details class="subsection" id="general">
+  <summary class="subsection-title">GENERAL <span class="accordion-icon"></span></summary>
+
+	
+<!-- >>>>>>>>>>>>>> GENERAL SECTION CONTENT STARTS HERE -->
+			  
+<article class="news-article">
+<h3 class="article-heading">India, US seal critical minerals and rare earths pact amid global supply chain race</h3>
+<p class="article-meta">The Economic Times &nbsp;|&nbsp; 26 May 2026</p>
+<p>
+<img src="images/news/india-us-seal.jpg" alt="" class="article-img-left">
+India and the United States signed a strategic agreement on critical minerals and rare earths to enhance cooperation in securing supply chains vital for semiconductors, electric vehicles, clean energy, and defence technologies. The pact, signed during the Quad Foreign Ministers’ meet, aims to strengthen resilient and diversified supply chains through mining, processing, recycling, and investment. External Affairs Minister S Jaishankar and US Secretary of State Marco Rubio emphasised the importance of this agreement for their national interests and innovation economies, highlighting the need to reduce dependence on China-dominated supplies.</p>
+<a href="https://economictimes.indiatimes.com/news/economy/foreign-trade/india-us-seal-critical-minerals-and-rare-earths-pact-amid-global-supply-chain-race/articleshow/131322410.cms" target="_blank" class="read-more">Read More &rarr;</a>
+</article>
+
+<hr>
+<article class="news-article">
+<h3 class="article-heading">How Lesol is turning distressed electronics assets into a ‘Make in India’ manufacturing play</h3>
+<p class="article-meta">The Hindu Business Line &nbsp;|&nbsp; 27 May 2026</p>
+<p>
+Mumbai-based Lesol City Limited is rapidly building a ₹138-crore electronics manufacturing platform by acquiring distressed and under-scaled assets, including BAG Electronics India, Renesola’s consumer electronics business, Usha Shriram lighting rights, and an Ahmedabad design house. This strategy leverages deeply discounted legacy businesses to gain manufacturing systems, customer networks, and technical expertise without heavy upfront investment. Lesol is expanding into EMS, industrial lighting, EV electronics, and battery management systems, while evaluating healthcare electronics, additional acquisitions, and a potential IPO to fuel its “Make in India” ambitions.</p>
+<a href="https://www.thehindubusinessline.com/info-tech/how-lesol-is-turning-distressed-electronics-assets-into-a-make-in-india-manufacturing-play/article71026097.ece" target="_blank" class="read-more">Read More &rarr;</a>
+</article>
+
+<hr>
+<article class="news-article">
+<h3 class="article-heading">ESSCI to train youth, supply skilled manpower for ESDM industry</h3>
+<p class="article-meta">BIS Infotech &nbsp;|&nbsp; 28 May 2026</p>
+<p>
+<img src="images/news/essci-to-train.jpg" alt="" class="article-img-left">
+India’s electronics and semiconductor industry is rapidly evolving, with the Electronics Sector Skills Council of India (ESSCI) launching a talent plan at the ELCINA Electronics Manufacturing Cluster in Bhiwadi, Rajasthan. Supported by the National Skill Development Corporation, ESSCI focuses on practical skills training through a Common Utility Centre, addressing the skill gap in areas like semiconductor packaging and automation. The cluster, backed by ₹46.09 crore government funding and over ₹1,200 crore private investment, aims to create over 2,700 jobs, aligning with India’s Make in India initiative.</p>
+<a href="https://www.bisinfotech.com/essci-to-train-youth-supply-skilled-manpower-for-esdm-industry/" target="_blank" class="read-more">Read More &rarr;</a>
+</article>
+
+<hr>
+<article class="news-article">
+<h3 class="article-heading">Cloud war intensifies as Google ties enterprise deals to in-house AI</h3>
+<p class="article-meta">Mint &nbsp;|&nbsp; 29 May 2026</p>
+<p>
+<img src="images/news/cloud-war-intensifies.jpg" alt="" class="article-img-left">
+Google Cloud is India’s third-largest cloud provider with a 14% market share, trailing Amazon Web Services and Microsoft Azure. Despite a consumer-led history, enterprise demand is rapidly growing. Google Cloud India reported ₹2,070 crore in FY25 revenue. Sreedharan, who joined in July last year, emphasises AI’s role in winning enterprise deals. Sovereign cloud adoption is early, with policies like the Digital Personal Data Protection Act influencing demand. Google’s work application user base offers an advantage, but breaking long-term deals remains challenging.</p>
+<a href="https://www.livemint.com/technology/ai-influencer-marketing-advertising-budgets-11779594109263.html" target="_blank" class="read-more">Read More &rarr;</a>
+</article>
+
+<hr>
+	
+<!-- GENERAL SECTION CONTENT ENDS HERE <<<<<<<<<<<<<<<<<< -->
+		  
+<div class="back-to-top-wrap">
+  <a href="#top" class="back-to-top">Top &#8593;</a>
+</div>
+		  
+</details>		  
+		  
+<!-- Subsection: Semiconductors -->
+
+<details class="subsection" id="semiconductors">
+  <summary class="subsection-title">SEMICONDUCTORS <span class="accordion-icon"></span></summary>
+
+<!-- >>>>>>>>>>>>>> SEMICONDUCTORS SECTION CONTENT STARTS HERE -->
+			  
+<article class="news-article">
+<h3 class="article-heading">Tata Electronics Teams Up With ASML For Semiconductor Manufacturing In India</h3>
+<p class="article-meta">NDTV &nbsp;|&nbsp; 16 May 2026</p>
+<p>
+<img src="images/news/tata-electronics-teams.jpg" alt="" class="article-img-left">
+Tata Electronics and ASML have partnered to enable chip manufacturing in India, announced during Prime Minister Narendra Modi’s visit to the Netherlands. ASML, a leader in lithography equipment essential for advanced semiconductors, will support Tata Electronics’ 300 mm semiconductor Fab in Dholera, Gujarat. This Rs 91,000 crore investment marks India’s first semiconductor wafer fabrication plant. The collaboration will focus on deploying ASML’s advanced lithography tools, training local talent, and enhancing supply chain resilience, with a commitment to developing R&D infrastructure for long-term success.</p>
+<a href="https://www.ndtv.com/india-news/tata-electronics-teams-up-with-asml-for-semiconductor-manufacturing-in-india-11505996" target="_blank" class="read-more">Read More &rarr;</a>
+</article>
+
+<hr>
+<article class="news-article">
+<h3 class="article-heading">Centre likely to extend India Semiconductor Mission 2.0 tenure to 12 years</h3>
+<p class="article-meta">Business Standard &nbsp;|&nbsp; 19 May 2026</p>
+<p>
+The government is contemplating extending the second phase of the India Semiconductor Mission (ISM) from five to twelve years. This extension aims to match the longer development and support periods needed for companies supplying raw materials to chip manufacturing and packaging units. The goal is to transform domestic MSMEs into suppliers for leading global semiconductor companies, enhancing their ability to compete on quality and scale. Officials emphasise the necessity of extended guidance and support for these firms to achieve this objective.</p>
+<a href="https://www.business-standard.com/industry/news/centre-likely-to-extend-india-semiconductor-mission-2-0-tenure-to-12-years-126051901431_1.html" target="_blank" class="read-more">Read More &rarr;</a>
+</article>
+
+<hr>
+<article class="news-article">
+<h3 class="article-heading">India can leapfrog in global semiconductor race as demand set to cross $200 billion by FY35: NITI Aayog</h3>
+<p class="article-meta">The Economic Times - Telecom &nbsp;|&nbsp; 30 May 2026</p>
+<p>
+<img src="images/news/india-can-leapfrog.jpg" alt="" class="article-img-left">
+India has a chance to become a key player in the global semiconductor supply chain, driven by rising demand from AI, 5G/6G, IoT, and electric mobility, as per NITI Aayog’s report. The industry’s shift towards AI accelerators and application-optimised architectures offers India opportunities for co-creation of technologies. The global semiconductor market is expected to grow significantly, with India’s demand projected to reach $90 billion by FY2030. However, the interconnected global value chain faces vulnerabilities, prompting efforts to build resilient local ecosystems.</p>
+<a href="https://telecom.economictimes.indiatimes.com/news/devices/india-can-leapfrog-in-global-semiconductor-race-as-demand-set-to-cross-200-billion-by-fy35-niti-aayog/131402874" target="_blank" class="read-more">Read More &rarr;</a>
+</article>
+
+<hr>s
+	
+<!-- SEMICONDUCTORS SECTION CONTENT ENDS HERE <<<<<<<<<<<<<<<<<< -->
+		  
+ 
+<div class="back-to-top-wrap">
+  <a href="#top" class="back-to-top">Top &#8593;</a>
+</div>
+
+</details>
+		  
+<!-- Subsection: Information Technology -->
+<details class="subsection" id="information-technology">
+  <summary class="subsection-title">Information Technology <span class="accordion-icon"></span></summary>
+
+<!-- >>>>>>>>>>>>>> INFORMATION TECHNOLOGY SECTION CONTENT STARTS HERE -->
+			
+<article class="news-article">
+<h3 class="article-heading">Centre tapping Big Tech companies for data centres, R&D in West Bengal</h3>
+<p class="article-meta">Business Standard &nbsp;|&nbsp; 17 May 2026</p>
+<p>
+<img src="images/news/centre-tapping-big.jpg" alt="" class="article-img-left">
+The central government is engaging global tech giants like Google, Amazon, and Microsoft, alongside Indian firms such as Reliance Industries and the Adani Group, to invest in data centres, hyperscalers, and R&D hubs in West Bengal. Discussions are also ongoing to attract semiconductor companies and increase global capability centres (GCCs) in the state. Some of these investment deals are anticipated to be finalised and announced in June.</p>
+<a href="https://www.business-standard.com/industry/news/centre-tapping-big-tech-companies-for-data-centres-r-d-in-west-bengal-126051700420_1.html" target="_blank" class="read-more">Read More &rarr;</a>
+</article>
+
+<hr>
+<article class="news-article">
+<h3 class="article-heading">Global centres in India slow hiring as AI reshapes work, ANSR CEO says</h3>
+<p class="article-meta">Reuters &nbsp;|&nbsp; 18 May 2026</p>
+<p>
+Global capability centres in India are adopting a cautious hiring approach due to geopolitical uncertainties and AI adoption, according to ANSR CEO Lalit Ahuja. India hosts over half of the world’s global centres, benefiting from a skilled workforce and low costs. However, AI may reduce headcounts and alter job roles. Hiring is being cut by 30% to 50%, with some plans scaling back from 5,000 to 2,000 employees. New entrants will drive growth with flexible workforce strategies, reflecting a shift from a “wait-and-watch” approach.</p>
+<a href="https://www.reuters.com/business/world-at-work/global-centres-india-slow-hiring-ai-reshapes-work-ansr-ceo-says-2026-05-18/" target="_blank" class="read-more">Read More &rarr;</a>
+</article>
+
+<hr>
+<article class="news-article">
+<h3 class="article-heading">IBM Bets $10b on Quantum Computing’s Commercial Future</h3>
+<p class="article-meta">The Economic Times &nbsp;|&nbsp; 30 May 2026</p>
+<p>
+<img src="images/news/ibm-bets-10b.jpg" alt="" class="article-img-left">
+IBM will invest over $10 billion in quantum computing over the next five years, aiming to deliver the first large-scale commercial quantum computer by 2029. Quantum computers use qubits, which can represent 0 and 1 simultaneously, allowing for faster and more powerful processing than traditional computers. Despite current error issues, IBM plans to develop error-correcting systems to enable practical applications, including discoveries in materials and healthcare. The investment will fund research, facilities, partnerships, and acquisitions, reflecting the global race in quantum technology.</p>
+<a href="https://economictimes.indiatimes.com/epaper/delhicapital/2026/may/30/satet-design/ibm-bets-10b-on-quantum-computings-commercial-future/articleshow/131398575.cms" target="_blank" class="read-more">Read More &rarr;</a>
+</article>
+
+<hr>
+<article class="news-article">
+<h3 class="article-heading">OpenAI Doubling Down on India as Codex Finds Takers</h3>
+<p class="article-meta">The Economic Times &nbsp;|&nbsp; 30 May 2026</p>
+<p>
+OpenAI is intensifying its focus on India as Codex adoption surges, making the country one of its top five markets. Codex usage has grown 27 times since early 2026, with over a quarter of requests for non-coding tasks. Thomas Jeng, head of startups—APAC, highlighted India’s diverse and sophisticated startup ecosystem and partnerships with TCS, Infosys, and Razorpay. Despite rising competition from Anthropic, OpenAI plans to expand investments, enhance enterprise solutions, and bridge the gap between AI capabilities and practical deployment for businesses.</p>
+<a href="https://economictimes.indiatimes.com/epaper/delhicapital/2026/may/30/satet-design/openai-doubling-down-on-india-as-codex-finds-takers/articleshow/131398599.cms" target="_blank" class="read-more">Read More &rarr;</a>
+</article>
+
+<hr>
+<hr>
+			
+<!-- INFORMATION TECHNOLOGY SECTION CONTENT ENDS HERE <<<<<<<<<<<<<<<<<< -->
+		
+<div class="back-to-top-wrap">
+  <a href="#top" class="back-to-top">Top &#8593;</a>
+</div>
+</details>
+	
+	
+<!-- Subsection: Consumer Electronics -->
+
+<details class="subsection" id="consumer-electronics">
+<summary class="subsection-title">Consumer Electronics <span class="accordion-icon"></span></summary>
+         
+<!-- >>>>>>>>>>>>>> CONSUMER ELECTRONICS SECTION CONTENT STARTS HERE -->
+			
+<article class="news-article">
+<h3 class="article-heading">LG Electronics India Q4 net profit falls 8 pc to Rs 693 crore</h3>
+<p class="article-meta">The Economic Times - Retail &nbsp;|&nbsp; 22 May 2026</p>
+<p>
+<img src="images/news/lg-electronics-india.jpg" alt="" class="article-img-left">
+LG Electronics India reported an 8% YoY decline in net profit to Rs 693 crore for Q4 FY26, down from Rs 755 crore in Q4 FY25. However, profit after tax surged 672% sequentially to Rs 90 crore. Revenue rose 8% YoY to Rs 8,054 crore and 96% sequentially to Rs 4,114 crore. The strong performance was driven by demand recovery and premiumisation in key categories. The company maintained market leadership and achieved an EBITDA margin of 11.7%, despite challenges from rupee depreciation and high commodity prices.</p>
+<a href="https://retail.economictimes.indiatimes.com/news/consumer-durables-and-information-technology/consumer-electronics/lg-electronics-india-q4-net-profit-falls-8-pc-to-rs-693-crore/131255991" target="_blank" class="read-more">Read More &rarr;</a>
+</article>
+
+<hr>
+<article class="news-article">
+<h3 class="article-heading">Samsung's consumer electronics workers are not happy about its Rs 3.25 crore chip employee bonuses</h3>
+<p class="article-meta">India Today &nbsp;|&nbsp; 29 May 2026</p>
+<p>
+Samsung’s largest union has approved a massive bonus package for 78,000 semiconductor division employees, granting each around Rs 3.25 crore, totalling approximately $26.5 billion. However, the Samsung Electronics Co Union (SECU), representing 13,000 workers from the company’s consumer electronics segment, plans to challenge this decision in a South Korean court. SECU argues the package unfairly favours chip employees over smartphone, TV, and home appliance workers. The union seeks to suspend the bonus distribution, highlighting internal discontent among Samsung’s diverse workforce regarding the payout.</p>
+<a href="https://www.indiatoday.in/technology/news/story/samsungs-consumer-electronics-workers-are-not-happy-about-its-rs-325-crore-chip-employee-bonuses-2918959-2026-05-29" target="_blank" class="read-more">Read More &rarr;</a>
+</article>
+
+<hr>
+<article class="news-article">
+<h3 class="article-heading">Automotive AI innovations power fresh momentum for LG Electronics</h3>
+<p class="article-meta">The Economic Times &nbsp;|&nbsp; 29 May 2026</p>
+<p>
+<img src="images/news/automotive-ai-innovations.jpg" alt="" class="article-img-left">
+LG Electronics is rapidly expanding into automotive and AI-driven mobility solutions, boosting investor confidence. Recent showcases highlighted its AI Cabin Platform, Automotive Content Platform, OLED displays, telematics, and driver-assistance technologies. Collaborating with Google, LG is integrating infotainment, voice, navigation, and AI-powered assistance to create software-defined, connected vehicles. The focus on personalised in-car experiences, on-device AI processing, and smart entertainment positions LG beyond traditional electronics. Rising global demand for connected cars and its growing automotive order book signal strong long-term growth potential for the company.</p>
+<a href="https://economictimes.indiatimes.com/markets/us-stocks/news/automotive-ai-innovations-power-fresh-momentum-for-lg-electronics/lg-electronics-accelerates-smart-mobility-ambitions/slideshow/131383515.cms?from=mdr" target="_blank" class="read-more">Read More &rarr;</a>
+</article>
+
+<hr>
+
+<!-- CONSUMER ELECTRONICS SECTION CONTENT ENDS HERE <<<<<<<<<<<<<<<<<< -->
+
+<div class="back-to-top-wrap">
+  <a href="#top" class="back-to-top">Top &#8593;</a>
+</div>
+</details>
+	
+<!-- Subsection: Telecom -->
+
+<details class="subsection" id="telecom">
+<summary class="subsection-title">Telecom <span class="accordion-icon"></span></summary>
+
+<!-- >>>>>>>>>>>>>> TELECOM SECTION CONTENT STARTS HERE -->
+
+<article class="news-article">
+<h3 class="article-heading">India’s satellite-to-phone plan faces industry divide over telecom-led model</h3>
+<p class="article-meta">Mint &nbsp;|&nbsp; 20 May 2026</p>
+<p>
+Direct-to-device (D2D) satellite technology is set to enhance connectivity in India, but it has sparked debates among telecom operators, satellite providers, and broadband firms over customer control, spectrum, and launch timelines. The Department of Telecommunications (DoT) proposes a ‘wholesale’ model, where satellite companies sell services to telecom operators, who then resell them. Reliance Jio, Bharti Airtel, and Vodafone Idea support this model for continuity, while some satellite firms warn of connectivity gaps. Starlink and others await spectrum licenses.</p>
+<a href="https://www.livemint.com/industry/telecom/india-direct-device-satellite-connectivity-telecom-operators-tech-firms-battle-11779185574022.html" target="_blank" class="read-more">Read More &rarr;</a>
+</article>
+
+<hr>
+<article class="news-article">
+<h3 class="article-heading">Bharti Airtel launches India's first 5G network slicing with Ericsson, boosting mobile leadership</h3>
+<p class="article-meta">The Economic Times &nbsp;|&nbsp; 21 May 2026</p>
+<p>
+<img src="images/news/bharti-airtel-launches.jpg" alt="" class="article-img-left">
+Ericsson announced India’s first commercial 5G network slicing deployment with Bharti Airtel, marking a new mobile leadership milestone. Ericsson CEO Börje Ekholm praised India’s digital advancement, while Nokia’s technology supports Airtel’s priority postpaid service. The ITU-APT Foundation commended the launch as innovative, aligning with 3GPP standards. Airtel’s service offers postpaid customers priority 5G data access on a dedicated network slice, enhancing experiences amid high traffic. Network slicing is seen as the next 5G evolution phase globally.</p>
+<a href="https://economictimes.indiatimes.com/industry/telecom/telecom-news/bharti-airtel-launches-indias-first-5g-network-slicing-with-ericsson-boosting-mobile-leadership/articleshow/131228952.cms" target="_blank" class="read-more">Read More &rarr;</a>
+</article>
+
+<hr>
+<article class="news-article">
+<h3 class="article-heading">Power outages, pricey diesel deal twin blows to India's telecom sector</h3>
+<p class="article-meta">Mint &nbsp;|&nbsp; 22 May 2026</p>
+<p>
+Telecom and tower companies in New Delhi are concerned about surging power demand and rising diesel prices, which could disrupt mobile services and increase costs. The Department of Telecommunications (DoT) is addressing these issues by collaborating with electricity distribution companies to ensure continuous power supply. Diesel price hikes, influenced by the West Asia war, further strain operations, as companies pass on fuel costs to operators. Increased network workload from work-from-home policies adds to the urgency of maintaining service quality.</p>
+<a href="https://www.livemint.com/industry/telecom-power-cuts-diesel-price-hike-mobile-network-services-11779357387791.html" target="_blank" class="read-more">Read More &rarr;</a>
+</article>
+
+<hr>
+<article class="news-article">
+<h3 class="article-heading">BSNL, Starlink explore partnership for backhaul, enterprise business</h3>
+<p class="article-meta">The Economic Times - Telecom &nbsp;|&nbsp; 25 May 2026</p>
+<p>
+BSNL is in early discussions with Elon Musk’s Starlink to explore partnerships for satellite backhaul and enterprise services in India, aiming to enhance connectivity in remote regions like the Northeast, Himalayas, and islands. Starlink’s satellite network can accelerate BSNL’s 4G and 5G rollout under the 4G Saturation and BharatNet programmes. While Starlink awaits security clearance, collaboration with BSNL could aid compliance, disaster response, and enterprise solutions, leveraging BSNL’s network. No formal agreement exists yet, but the partnership promises significant rural connectivity improvements.</p>
+<a href="https://telecom.economictimes.indiatimes.com/news/portal-in-portal/satcom/bsnl-and-starlink-explore-strategic-partnership-for-enhanced-internet-services-in-india/131307687" target="_blank" class="read-more">Read More &rarr;</a>
+</article>
+
+<hr>
+<article class="news-article">
+<h3 class="article-heading">Telecom subscriber base grows to 133.7 cr in April, Airtel stays on top: TRAI data</h3>
+<p class="article-meta">The Economic Times &nbsp;|&nbsp; 26 May 2026</p>
+<p>
+<img src="images/news/telecom-subscriber-base.jpg" alt="" class="article-img-left">
+Bharti Airtel led subscriber growth in April, adding 34.82 lakh net new customers, surpassing Reliance Jio. The total telecom subscriber base reached a record 133.75 crore, with a 0.52% monthly growth rate. Airtel’s additions included 31.39 lakh in mobile and 3.43 lakh in wireline. Jio added 30.84 lakh, with 29.42 lakh mobile and 1.42 lakh wireline. Vodafone Idea and BSNL gained subscribers, while MTNL and Tata Teleservices lost. Broadband subscribers rose to 107.34 crore, led by Jio with 52.69 crore.</p>
+<a href="https://economictimes.indiatimes.com/industry/telecom/telecom-subscriber-base-grows-to-133-7-cr-in-april-airtel-stays-on-top-trai-data/articleshow/131333165.cms" target="_blank" class="read-more">Read More &rarr;</a>
+</article>
+
+<hr>
+			
+<!-- TELECOM SECTION CONTENT ENDS HERE <<<<<<<<<<<<<<<<<< -->
+			
+<div class="back-to-top-wrap">
+  <a href="#top" class="back-to-top">Top &#8593;</a>
+</div>
+</details>
+		  
+<!-- Subsection: EVs & Auto Electronics -->
+
+<details class="subsection" id="evs-auto">
+<summary class="subsection-title">EVs &amp; Auto Electronics <span class="accordion-icon"></span></summary>
+          
+<!-- >>>>>>>>>>>>>> EVS & ELECTRONICS SECTION CONTENT STARTS HERE -->
+			
+<article class="news-article">
+<h3 class="article-heading">India says 'Hum Do, Humari Ek EV' as more households opt for at least 1 electric vehicle for short trips</h3>
+<p class="article-meta">The Economic Times &nbsp;|&nbsp; 19 May 2026</p>
+<p>
+<img src="images/news/india-says-hum.jpg" alt="" class="article-img-left">
+Rising petrol prices, driven by West Asia conflicts and crude volatility, are pushing urban Indian households to adopt electric vehicles (EVs). Electric two-wheeler registrations rose 13.5% in May’s first half, even as overall two-wheeler sales fell 5.5%. Families increasingly buy e-scooters as second vehicles for short, repetitive urban trips like school runs or grocery errands, attracted by running costs of just 30–50 paise per km. The trend is also spurring investment in EV charging franchises, typically requiring Rs 30–40 lakh, as fuel price hikes strengthen the EV adoption case.</p>
+<a href="https://economictimes.indiatimes.com/industry/renewables/india-says-hum-do-humari-ek-ev-as-more-households-opt-for-at-least-1-electric-vehicle-for-short-trips-e-scooters-demand/articleshow/131185703.cms" target="_blank" class="read-more">Read More &rarr;</a>
+</article>
+
+<hr>
+<article class="news-article">
+<h3 class="article-heading">India to strengthen EV shield against oil imports with fresh subsidies: Report</h3>
+<p class="article-meta">The Economic Times &nbsp;|&nbsp; 25 May 2026</p>
+<p>
+The government plans to expand subsidies for electric two-wheelers under the PM E-Drive scheme, Mint reported. The heavy industries ministry is seeking extra funds to cut oil dependence and support clean mobility. The scheme, launched in 2024 with ₹10,900 crore for 2.47 million vehicles, has already subsidised 2.35 million as of 24 May. Subsidies were ₹5,000/kWh initially, halving in the second year. An extension beyond July 2026 is likely, but funding and budget adjustments for FY27 are still under discussion.</p>
+<a href="https://economictimes.indiatimes.com/news/economy/policy/govt-plans-to-double-down-on-electric-two-wheeler-subsidies-report/articleshow/131303708.cms" target="_blank" class="read-more">Read More &rarr;</a>
+</article>
+
+<hr>
+<article class="news-article">
+<h3 class="article-heading">Amara Raja plans ₹1,700 crore capex push for FY27; targets Q1 FY28 lithium plant</h3>
+<p class="article-meta">The Economic Times - Auto &nbsp;|&nbsp; 27 May 2026</p>
+<p>
+<img src="images/news/amara-raja-plans.jpg" alt="" class="article-img-left">
+Amara Raja Energy &amp; Mobility plans a ₹1,700 crore capex in FY27, focusing on its lithium-ion cell and battery energy storage system (BESS) businesses. Through Amara Raja Advanced Technologies, it targets 16GWh cell production by 2030, with the first 2GWh line operational by Q1 FY28. A 5GWh BESS facility, scalable to 10GWh, will start by late 2026. Initial BESS margins are 6–7%. The firm is prioritising in-house technology due to Chinese restrictions and views hybrids as crucial for India’s gradual transition from ICE vehicles to EVs.</p>
+<a href="https://auto.economictimes.indiatimes.com/news/auto-components/amara-raja-announces-1700-crore-investment-for-lithium-ion-battery-plant-and-energy-storage-systems/131340288" target="_blank" class="read-more">Read More &rarr;</a>
+</article>
+
+<hr>
+<article class="news-article">
+<h3 class="article-heading">Indonesia’s nickel woes due to West Asia war to hit India’s EV battery and stainless-steel sectors</h3>
+<p class="article-meta">Mint &nbsp;|&nbsp; 29 May 2026</p>
+<p>
+<img src="images/news/indonesia’s-nickel-woes.jpg" alt="" class="article-img-left">
+India’s EV battery, energy storage, and stainless-steel sectors are facing higher nickel prices and supply uncertainty due to the West Asia war. Indonesian refineries, reliant on West Asian phosphorus and sulphur, are affected by the war and the blockade of the Strait of Hormuz. India imports 80% of its ferronickel from Indonesia, crucial for stainless steel and EV batteries. Rising costs and delays are concerns, with BMW India adjusting prices. Experts note India imports processed nickel products from Indonesia.</p>
+<a href="https://www.livemint.com/economy/indonesia-nickel-woes-west-asia-war-india-ev-batteries-stainless-steel-jindal-stainless-11779968472533.html" target="_blank" class="read-more">Read More &rarr;</a>
+</article>
+
+<hr>
+
+<!-- EVS & ELECTRONICS SECTION CONTENT ENDS HERE <<<<<<<<<<<<<<<<<< -->
+        
+<div class="back-to-top-wrap">
+  <a href="#top" class="back-to-top">Top &#8593;</a>
+</div>
+</details>
+	
+<!-- Subsection: Defence & Solar -->
+		  
+<details class="subsection" id="defence-solar">
+<summary class="subsection-title">Defence &amp; Solar <span class="accordion-icon"></span></summary>
+
+<!-- >>>>>>>>>>>>>> DEFENCE & SOLAR SECTION CONTENT STARTS HERE -->
+
+<article class="news-article">
+<h3 class="article-heading">India blocks China's request for dispute panel on solar sector support measures at WTO</h3>
+<p class="article-meta">The Economic Times &nbsp;|&nbsp; 22 May 2026</p>
+<p>
+<img src="images/news/india-blocks-chinas.jpg" alt="" class="article-img-left">
+India has blocked China’s request to establish a WTO dispute panel over New Delhi’s support measures for solar cells, modules, and IT sectors. China’s complaint, filed in December, alleges India’s tariffs and domestic product mandates discriminate against Chinese goods, violating WTO rules. India refutes these claims, asserting its measures align with WTO standards and criticises China’s dominance in the solar module market. The request was denied at a May 22 DSB meeting, but China can renew it. Both nations are WTO members.</p>
+<a href="https://economictimes.indiatimes.com/news/economy/foreign-trade/india-blocks-chinas-request-for-dispute-panel-on-solar-sector-support-measures-at-wto/articleshow/131264649.cms" target="_blank" class="read-more">Read More &rarr;</a>
+</article>
+
+<hr>
+<article class="news-article">
+<h3 class="article-heading">India floats RFP to upgrade 258 Su-30MKI fighters with anti-jamming navigation system</h3>
+<p class="article-meta">The Times of India &nbsp;|&nbsp; 27 May 2026</p>
+<p>
+The Indian defence ministry has issued a request for proposal to upgrade the Su-30MKI fighter jets with a new anti-jamming, anti-spoofing multi-constellation GPS antenna, part of the “Super Sukhoi” modernisation programme. The upgrade aims to enhance the IAF’s electronic warfare capabilities, allowing the jets to operate under multiple satellite systems, including NaVIC, GPS, GLONASS, BeiDou, Galileo, and GAGAN. The project includes delivering 300 antenna systems, 50 field-level testers, and 10 base-level testers, to be completed in 24 months post-contract signing.</p>
+<a href="https://timesofindia.indiatimes.com/defence/india-floats-rfp-to-upgrade-258-su-30mki-fighters-with-anti-jamming-navigation-system/articleshow/131337286.cms" target="_blank" class="read-more">Read More &rarr;</a>
+</article>
+
+<hr>
+<article class="news-article">
+<h3 class="article-heading">Defence ministry issues RFP for 5th-generation stealth jet project AMCA; 3 private players in race, HAL out</h3>
+<p class="article-meta">The Times of India &nbsp;|&nbsp; 28 May 2026</p>
+<p>
+<img src="images/news/defence-ministry-issues.jpg" alt="" class="article-img-left">
+India’s defence ministry has issued a request for proposal to three private companies—Tata Advanced Systems, Larsen and Toubro with Bharat Electronics, and Bharat Forge with Bharat Earth Movers—for developing the Advanced Medium Combat Aircraft (AMCA), a stealth 5th-generation fighter jet. The project, excluding Hindustan Aeronautics Ltd, aims to create five prototypes by early 2027, with the first flight between 2028-29 and serial production in the mid-2030s. The AMCA will feature super-cruise, internal weapons bays, and advanced AI, with a budget of Rs 15,000 crore.</p>
+<a href="https://timesofindia.indiatimes.com/defence/news/defence-ministry-issues-rfp-for-5th-generation-stealth-jet-project-amca-3-private-players-in-race-hal-out/articleshow/131360976.cms" target="_blank" class="read-more">Read More &rarr;</a>
+</article>
+
+<hr>
+					
+<!-- DEFENCE & SOLAR SECTION CONTENT ENDS HERE <<<<<<<<<<<<<<<<<< -->
+
+<div class="back-to-top-wrap">
+  <a href="#top" class="back-to-top">Top &#8593;</a>
+</div>
+</details>
+	
+<!-- Subsection: MSME -->
+<details class="subsection" id="msme">
+<summary class="subsection-title">MSME <span class="accordion-icon"></span></summary>
+
+<!-- >>>>>>>>>>>>>> MSME SECTION CONTENT STARTS HERE -->
+			
+<article class="news-article">
+<h3 class="article-heading">Steel manufacturers seek revival of govt distribution system for MSMEs</h3>
+<p class="article-meta">The Times of India &nbsp;|&nbsp; 21 May 2026</p>
+<p>
+Steel manufacturers and MSMEs in Punjab are urging the government to revive the earlier PSIEC-supported steel distribution system, which allowed small units to procure raw materials at fair rates. Following deregulation, MSMEs now rely on private distributors and large players, facing higher costs and market imbalance. Industry leaders claim this has led to cartel-like conditions, hurting small engineering, fabrication, and agricultural equipment units. They demand restoration of PSIEC depots and stricter monitoring to ensure affordable steel access, safeguard jobs, and maintain competitiveness.</p>
+<a href="https://timesofindia.indiatimes.com/city/ludhiana/steel-manufacturers-seek-revival-of-govt-distribution-system-for-msmes/articleshow/131250571.cms" target="_blank" class="read-more">Read More &rarr;</a>
+</article>
+
+<hr>
+<article class="news-article">
+<h3 class="article-heading">FM Sitharaman launches key measures to boost credit access for MSME sector</h3>
+<p class="article-meta">The Economic Times - Manufacturing &nbsp;|&nbsp; 25 May 2026</p>
+<p>
+<img src="images/news/fm-sitharaman-launches.jpg" alt="" class="article-img-left">
+Union Finance Minister Nirmala Sitharaman, during SIDBI’s 37th foundation day in Mumbai, launched initiatives to enhance MSME credit access and modernise rural enterprises. Key measures include the SIDBI–RRB Co-Lending Portal for rural credit, MachFin Mart for machinery procurement with integrated financing, and MoRE to upgrade 10,000 rural micro units over three years. Additionally, a Credit Cards for Micro Enterprises scheme offers limits up to ₹5 lakh. Sitharaman highlighted SIDBI’s future role in MSME financing, supported by the government’s ₹5,000 crore capital infusion.</p>
+<a href="https://manufacturing.economictimes.indiatimes.com/news/industry/fm-sitharaman-launches-key-measures-to-boost-credit-access-for-msme-sector/131310061" target="_blank" class="read-more">Read More &rarr;</a>
+</article>
+
+<hr>
+<article class="news-article">
+<h3 class="article-heading">Nearly 20,000 MSME applications received under ECLGS</h3>
+<p class="article-meta">The New Indian Express &nbsp;|&nbsp; 30 May 2026</p>
+<p>
+Under the Emergency Credit Line Guarantee Scheme (ECLGS) 5.0, the government has received nearly 20,000 MSME applications seeking Rs 25,000 crore, offering 100% credit guarantee for MSMEs and 90% for non-MSMEs and airlines. Of the total allocation, Rs 5,000 crore is reserved for airlines, though no applications have come from them yet. Loans have a seven-year tenure with a two-year moratorium. Additionally, 23 policies under the $1.5 billion Bharat Maritime Fund aim to support affordable maritime insurance with a sovereign guarantee.</p>
+<a href="https://www.newindianexpress.com/business/2026/May/29/nearly-20000-msme-applications-received-under-eclgs" target="_blank" class="read-more">Read More &rarr;</a>
+</article>
+
+<hr>
+			
+			
+<!-- MSME SECTION CONTENT ENDS HERE <<<<<<<<<<<<<<<<<< -->
+
+<div class="back-to-top-wrap">
+  <a href="#top" class="back-to-top">Top &#8593;</a>
+</div>
+</details>
+	
+	
+</section>
+
+      <hr class="section-divider">
+
+      <!-- ========================
+           SECTION 04: PERSPECTIVE
+           ======================== -->
+ <!---     <section class="newsletter-section" id="perspective">
+        <h2 class="section-title">Perspective</h2>
+
+        <article class="news-article">
+          <h3 class="article-heading">Heading 01</h3>
+          <h4 class="article-subheading">Subheading</h4>          <p class="article-meta">Publication &nbsp;|&nbsp; Date</p>
+<p>Article body text goes here.</p>
+          <a href="#" class="read-more">Read More &rarr;</a>
+        </article>
+
+      </section>
+
+      <hr class="section-divider">
+
+-->
+
+      <!-- ========================
+           SECTION 05: PUBLICATIONS
+           ======================== -->
+      
+		<section class="newsletter-section" id="publications">
+  <h2 class="section-title">ELCINA Publications</h2>
+
+  <!-- Publication 01 -->
+  <article class="publication-article">
+    <div class="publication-text">
+      <h3 class="article-heading">ELCINA Electronics Outlook (Jul-Dec 2025)</h3>
+      <p>ELCINA Electronics Outlook (EEO), ELCINA's fortnightly magazine, serves as a key voice of the Indian electronics industry. It provides key updates on the industry, policy developments, regulatory changes, technology trends, industry opportunities, and ELCINA's initiatives, including events, awards, and activities. The EEO features expert articles, sector updates, and analysis of government initiatives such as PLI, making it an important information source for companies across the electronics, components, EMS, telecom, and defence sectors.</p>
+      <a href="#" class="read-more" target="_blank" rel="noopener noreferrer">Read More &rarr;</a>
+    </div>
+    <div class="publication-image">
+<a href="https://elcina.com/elcina-electronics-outlook" target="_blank" rel="noopener noreferrer">
+  <img src="images/elcina-publications/eeo-jul-dec-2025.jpg" alt="EEO July-December 2025" />
+</a>    
+</div>
+  </article>
+
+  <hr>
+
+  <!-- Publication 02 -->
+  <article class="publication-article">
+    <div class="publication-text">
+      <h3 class="article-heading">ELCINA Directory of Indian Electronics Industry (2025-26)</h3>
+      <p>The ELCINA Directory of the Indian Electronics Industry is a comprehensive reference that provides updated insights into the country’s electronics sector, including the business environment, industry statistics, company databases, and future projections. Designed in an easy-to-use format, it is widely used by industry players, financial institutions, consultancy organisations, foreign investors, and industry promotion bodies in India and abroad. Considered one of the most authoritative guides to the Indian electronics ecosystem, the directory helps stakeholders track industry developments, identify potential partners and opportunities, and generate business enquiries.</p>
+      <a href="https://elcina.com/elcina-directory-of-indian-electronics-industry" class="read-more" target="_blank" rel="noopener noreferrer">Read More &rarr;</a>
+    </div>
+    <div class="publication-image">
+		<a href="https://elcina.com/elcina-directory-of-indian-electronics-industry" target="_blank" rel="noopener noreferrer">
+  <img src="images/elcina-publications/Directory-2025-26_page-0001.jpg" alt="ELCINA Directory of Indian Electronics Industry (2025-26)" />
+</a>
+    </div>
+  </article>
+
+  <hr>
+
+  <!-- Publication 03 -->
+  <article class="publication-article">
+    <div class="publication-text">
+      <h3 class="article-heading">Roadmap to Develop a Robust PCB Ecosystem in India</h3>
+      <p>Roadmap to Develop a Robust PCB Ecosystem in India provides an overview of India’s PCB industry, including the current market size in terms of domestic production, imports, and exports, and the structural gaps that have led to significant import dependence. Against the backdrop of rapidly growing electronics manufacturing in the country, it highlights the key drivers of demand as well as the challenges facing domestic PCB manufacturing. The report also examines the growth potential of the sector and identifies the investments, technology capabilities, and infrastructure needed to build a stronger domestic value chain, while highlighting key global and Indian ecosystem players who could help accelerate the development of a competitive PCB manufacturing base in India.</p>
+      <a href="https://elcina.com/roadmap-for-developing-pcb-eco-system-in-india" class="read-more" target="_blank" rel="noopener noreferrer">Read More &rarr;</a>
+    </div>
+    <div class="publication-image">
+				<a href="https://elcina.com/roadmap-for-developing-pcb-eco-system-in-india" target="_blank" rel="noopener noreferrer">
+  <img src="images/elcina-publications/roadmap-pcb-ecosystem.jpg" alt="Roadmap to Develop a Robust PCB Ecosystem in India" />
+</a>
+    </div>
+  </article>
+
+  <hr>
+
+  <!-- Publication 04 -->
+  <article class="publication-article">
+    <div class="publication-text">
+      <h3 class="article-heading">Report on Strategic Electronics for Defence & Aerospace</h3>
+      <p>As India advances towards self-reliance, strategic electronics will play a pivotal role in strengthening national security and enhancing India’s position in the global technological and geopolitical order. Report on Strategic Electronics for Defence & Aerospace provides a comprehensive and up-to-date overview of India’s strategic electronics landscape. It highlights the evolving policy, procurement, and innovation ecosystem that is enabling India’s transition from import dependence to global leadership. Serving as both a guide and catalyst, the report brings together insights for coordinated action by industry, government, academia, and the armed forces.</p>
+      <a href="https://elcina.com/strategic-electronics-for-defence-aerospace-august-2025" class="read-more" target="_blank" rel="noopener noreferrer">Read More &rarr;</a>
+    </div>
+    <div class="publication-image">
+ <a href="https://elcina.com/strategic-electronics-for-defence-aerospace-august-2025" target="_blank" rel="noopener noreferrer">
+  <img src="images/elcina-publications/report-strategic-electronics-defence-aerospace.jpg" alt="Report on Strategic Electronics for Defence & Aerospace" />
+</a>
+    </div>
+  </article>
+
+  <hr>
+
+  <!-- Publication 05 -->
+  <article class="publication-article">
+    <div class="publication-text">
+      <h3 class="article-heading">Indian Surveillance & Security Products Market </h3>
+      <p>The Indian Surveillance & Security Products Market report reviews the structure and recent growth of the sector, covering key products such as CCTV cameras, video management systems, storage solutions, and access control technologies. It examines the drivers behind rising demand  – including urban infrastructure expansion, smart city initiatives, and increasing security requirements – while assessing the balance between domestic manufacturing and imports. The report identifies product segments that could be developed locally with appropriate investments and highlights key constraints such as gaps in technology, components, and manufacturing scale. It also outlines strategies to address these challenges, prioritize investments in critical technologies and components, and strengthen domestic value addition by building a more integrated surveillance and security manufacturing value chain in India.</p>
+      <a href="https://elcina.com/indian-surveillance-security-products-market" class="read-more" target="_blank" rel="noopener noreferrer">Read More &rarr;</a>
+    </div>
+    <div class="publication-image">
+<a href="https://elcina.com/elcina-electronics-outlook" target="_blank" rel="noopener noreferrer">
+  <img src="images/elcina-publications/indian-surveillance-security-products-market.jpg" alt="Indian Surveillance & Security Products Market" />
+</a>
+    </div>
+  </article>
+
+<hr>
+
+	<!-- Publication 06 -->
+  <article class="publication-article">
+    <div class="publication-text">
+      <h3 class="article-heading">EMS Task Force report on Market & Industry Analysis of EMS Sector in India</h3>
+      <p>The EMS Task Force report on Market & Industry Analysis of the EMS Sector in India examines the structure and scale of the electronics manufacturing services (EMS) industry and its role within India’s broader electronics manufacturing ecosystem. It highlights the significant dependence on imports for PCB assemblies, sub-assemblies, and finished electronic goods, which limits domestic value addition despite strong demand for electronics in the country. By mapping the current EMS landscape and the gap between domestic production and consumption, the report identifies the scale of the opportunity available for local manufacturing. It also outlines the potential for India to expand EMS capabilities significantly through investments, stronger supply chains, and supportive policy measures, enabling the country to capture a much larger share of electronics manufacturing and reduce reliance on imports.</p>
+      <a href="https://elcina.com/ems-task-force-report-on-market-industry-analysis-of-ems-sector-in-india" class="read-more" target="_blank" rel="noopener noreferrer">Read More &rarr;</a>
+    </div>
+    <div class="publication-image">
+<a href="https://elcina.com/ems-task-force-report-on-market-industry-analysis-of-ems-sector-in-india" target="_blank" rel="noopener noreferrer">
+  <img src="images/elcina-publications/ems-task-force-report-market-industry.jpg" alt="EMS Task Force report on Market & Industry Analysis of EMS Sector in India" />
+</a>
+    </div>
+  </article>
+
+  <hr>
+			
+<!-- Publication 07 -->
+  <article class="publication-article">
+    <div class="publication-text">
+      <h3 class="article-heading">Manufacturing & Other Operations under Warehousing Regulation (MOOWR) Scheme: In-bound Electronics Manufacturing Facility</h3>
+      <p>The ELCINA report on the Manufacturing & Other Operations under Warehousing Regulation (MOOWR) scheme offers electronics manufacturers detailed guidance on leveraging this customs duty deferment program. MOOWR, revamped in 2019 under the Customs Act Sections 58 and 65, enables duty-free import of raw materials and capital goods into bonded warehouses for processing, manufacturing, job work, or repacking, with deferred duties payable only upon domestic clearance – ideal for export-focused EMS firms in India to cut working capital costs and boost liquidity amid PLI and ECMS incentives. It emphasizes MOOWR's role in positioning India as a manufacturing hub, complementing Budget 2026's ₹40,000 crore outlay, while highlighting risks like inventory tracking and exit duties.</p>
+      <a href="https://elcina.com/manufacturing" class="read-more" target="_blank" rel="noopener noreferrer">Read More &rarr;</a>
+    </div>
+    <div class="publication-image">
+ <a href="https://elcina.com/manufacturing" target="_blank" rel="noopener noreferrer">
+  <img src="images/elcina-publications/manufacturing-other-operations-under-moowr.jpg" alt="Manufacturing & Other Operations under Warehousing Regulation (MOOWR) Scheme: In-bound Electronics Manufacturing Facility" />
+</a>
+    </div>
+  </article>
+			
+</section>
+
+<div class="back-to-top-wrap">
+  <a href="#top" class="back-to-top">Top &#8593;</a>
+</div>
+
+<hr class="section-divider">
+
+      <!-- ========================
+           SECTION 06: ELCINA EVENTS
+           ======================== -->
+      <section class="newsletter-section" id="elcina-events">
+        <h2 class="section-title">ELCINA Events&nbsp;&amp; Activities</h2>
+
+		  <div class="feature-image">
+  <a href="https://your-url-here.com" target="_blank" rel="noopener noreferrer">
+    <img src="images/elcina-events/6th-electronics-supply-chain-summit-2026.jpg" alt="6th Electronics Supply Chain Summit 2026" />
+  </a>
+<!--  <p class="feature-image-caption">Optional caption text here</p> -->
+</div>
+		  
+        <article class="news-article">
+          <h3 class="article-heading">6th Electronics Supply Chain Summit</h3>
+          <h4 class="article-subheading">8-10 April 2026 | IEML, Greater Noida</h4>          
+<p>Join the 6th Electronics Supply Chain Summit, co-located with Electronica India, India's premier platform bringing together OEMs, EMS providers, component manufacturers, and policymakers to strengthen resilient manufacturing ecosystems. Connect with industry leaders across the electronics value chain, participate in buyer-seller meetings, and explore exhibitions featuring PCBs, display technologies, passive components, and advanced assembly solutions. Secure your place to source smarter, innovate faster, and help shape India's $300-billion electronics industry vision for 2030.</p>
+          <a href="https://elcina.com/forthcoming-activities" class="read-more">Read More &rarr;</a>
+        </article>
+
+		  <hr>
+		  
+		  <div class="feature-image">
+  <a href="https://your-url-here.com" target="_blank" rel="noopener noreferrer">
+    <img src="images/elcina-events/ses-defence-aerospace-2026.jpg" alt="Defence & Aerospace 15th Strategic Electronics Summit 2026" />
+  </a>
+<!--  <p class="feature-image-caption">Optional caption text here</p> -->
+</div>
+		   <article class="news-article">
+          <h3 class="article-heading">Defence & Aerospace: 15th Strategic Electronics Summit, 2026</h3>
+          <h4 class="article-subheading">23 & 24 July 2026 | BIEC, Bengaluru</h4>          
+<p>The 15th Strategic Electronics Summit (SES) 2026 on Defence and Aerospace will bring together innovators, manufacturers, system integrators, and defence procurement agencies to highlight India's growing capabilities in electronic systems across aerospace, land, naval, and strategic platforms. The summit will serve as a key platform for collaboration, technology exchange, and industry-government engagement, aimed at accelerating India's push toward greater self-reliance in defence electronics.
+</p>
+          <a href="#" class="read-more">Read More &rarr;</a>
+        </article>
+		  
+      </section>
+
+<div class="back-to-top-wrap">
+  <a href="#top" class="back-to-top">Top &#8593;</a>
+</div>
+
+      <hr class="section-divider">
+
+      <!-- ========================
+     SECTION 07: UPCOMING EVENTS
+     ======================== -->
+<section class="newsletter-section" id="upcoming-events">
+  <h2 class="section-title">Upcoming Events</h2>
+
+  <!-- DOMESTIC EVENTS -->
+  <div class="subsection" id="domestic-events">
+    <h3 class="subsection-title">Domestic Events</h3>
+
+    <article class="event-article">
+      <div class="event-image">
+<a href="https://www.convergenceindia.org/" target="_blank" rel="noopener noreferrer">
+		  <img src="images/upcoming-events/domestic-events/convergence-india-logo.png" alt="Convergence India Expo" />
+		  </a>
+      </div>
+      <div class="event-text">
+        <h4 class="article-heading">Convergence India Expo</h4>
+        <p class="event-date">23 - 25 March 2026</p>
+        <p class="event-venue">Bharat Mandapam, Pragati Maidan, New Delhi</p>
+        <a href="https://www.convergenceindia.org/" target="_blank" rel="noopener noreferrer" class="event-link">convergenceindia.org &rarr;</a>
+      </div>
+    </article>
+
+    <hr>
+
+    <article class="event-article">
+      <div class="event-image">
+<a href="https://www.embeddedtechexpo.com/" target="_blank" rel="noopener noreferrer">
+		  <img src="images/upcoming-events/domestic-events/embedded-world-logo.png" alt="Embedded Tech India Expo" />
+		  </a>
+      </div>
+      <div class="event-text">
+        <h4 class="article-heading">Embedded Tech India Expo</h4>
+        <p class="event-date">23 - 25 March 2026</p>
+        <p class="event-venue">Bharat Mandapam, Pragati Maidan, New Delhi</p>
+        <a href="https://www.embeddedtechexpo.com/" target="_blank" rel="noopener noreferrer" class="event-link">embeddedtechexpo.com &rarr;</a>
+      </div>
+    </article>
+
+    <hr>
+
+    <article class="event-article">
+      <div class="event-image">
+<a href="https://electronica-india.com/en/" target="_blank" rel="noopener noreferrer">
+		  <img src="images/upcoming-events/domestic-events/electronica-india-logo.png" alt="Electronica India" />
+	</a>
+      </div>
+      <div class="event-text">
+        <h4 class="article-heading">Electronica India</h4>
+        <p class="event-date">08 - 10 April 2026</p>
+        <p class="event-venue">India Expo Centre &amp; Mart (IEML), Greater Noida</p>
+        <a href="https://electronica-india.com/en/" target="_blank" rel="noopener noreferrer" class="event-link">electronica-india.com/en &rarr;</a>
+      </div>
+    </article>
+
+    <hr>
+
+    <article class="event-article">
+      <div class="event-image">
+<a href="https://productronica-india.com/en/" target="_blank" rel="noopener noreferrer">
+		  <img src="images/upcoming-events/domestic-events/productronica-india-logo.png" alt="Productronica India" />
+</a>
+      </div>
+      <div class="event-text">
+        <h4 class="article-heading">Productronica India</h4>
+        <p class="event-date">08 - 10 April 2026</p>
+        <p class="event-venue">India Expo Centre &amp; Mart (IEML), Greater Noida</p>
+        <a href="https://productronica-india.com/en/" target="_blank" rel="noopener noreferrer" class="event-link">productronica-india.com/en &rarr;</a>
+      </div>
+    </article>
+
+    <hr>
+
+    <article class="event-article">
+      <div class="event-image">
+<a href="https://www.elcina.com/" target="_blank" rel="noopener noreferrer">
+		  <img src="images/upcoming-events/domestic-events/electronics-supply-chain-2026.png" alt="6th Electronics Supply Chain 2026" />
+</a>
+      </div>
+      <div class="event-text">
+        <h4 class="article-heading">6th Electronics Supply Chain Summit<br>(Co-located with Electronica India)
+        </h4>
+<p class="event-date">08 - 10 April 2026</p>
+        <p class="event-venue">India Expo Centre &amp; Mart (IEML), Greater Noida</p>
+        <a href="https://www.elcina.com/" target="_blank" rel="noopener noreferrer" class="event-link">ELCINA.com &rarr;</a>
+      </div>
+    </article>
+
+    <hr>
+
+    <article class="event-article">
+      <div class="event-image">
+<a href="" target="_blank" rel="noopener noreferrer">
+		  <img src="images/upcoming-events/domestic-events/bpca-logo.png" alt="Bharat's Platform for Printed Circuit Boards (BPCA)" />
+</a>
+      </div>
+      <div class="event-text">
+        <h4 class="article-heading">Bharat's Platform for Printed Circuit Boards (BPCA)<br>(Co-located with Electronica India)</h4>
+        <p class="event-date">08 - 10 April 2026</p>
+        <p class="event-venue">India Expo Centre &amp; Mart (IEML), Greater Noida</p>
+      </div>
+    </article>
+
+    <hr>
+	  
+	  <article class="event-article">
+      <div class="event-image">
+<a href="https://indiaelectronicsweek.com" target="_blank" rel="noopener noreferrer">
+		  <img src="images/upcoming-events/domestic-events/india-electronics-week-logo.png" alt="India Electronics Week (IEW)" />
+	</a>
+      </div>
+      <div class="event-text">
+        <h4 class="article-heading">India Electronics Week (IEW)</h4>
+        <p class="event-date">13 - 15 May 2026</p>
+        <p class="event-venue">Karnataka Trade Promotion Organisation (KTPO), Whitefield, Bengaluru</p>
+        <a href="https://indiaelectronicsweek.com" target="_blank" rel="noopener noreferrer" class="event-link">indiaelectronicsweek.com &rarr;</a>
+      </div>
+    </article>
+
+    <hr>
+
+<article class="event-article">
+      <div class="event-image">
+<a href="https://ipcaexpo.com" target="_blank" rel="noopener noreferrer">
+		  <img src="images/upcoming-events/domestic-events/ipca-electronics-expo-logo.png" alt="IPCA Electronics Expo" />
+	</a>
+      </div>
+      <div class="event-text">
+        <h4 class="article-heading">IPCA Electronics Expo</h4>
+        <p class="event-date">05 - 07 August 2026</p>
+        <p class="event-venue">Bharat Mandapam, Pragati Maidan, New Delhi</p>
+        <a href="https://ipcaexpo.com" target="_blank" rel="noopener noreferrer" class="event-link">electronica-india.com/en &rarr;</a>
+      </div>
+    </article>
+    <hr>
+	  
+    <article class="event-article">
+      <div class="event-image">
+<a href="https://ses-india.in/" target="_blank" rel="noopener noreferrer">
+		  <img src="images/upcoming-events/domestic-events/ses-2026-logo.png" alt="Strategic Electronics Summit" />
+</a>
+	</div>
+      <div class="event-text">
+        <h4 class="article-heading">Strategic Electronics Summit (SES)</h4>
+        <p class="event-date">23 - 24 July 2026</p>
+        <p class="event-venue">Bangalore International Exhibition Centre (BIEC), Bengaluru</p>
+        <a href="https://ses-india.in/" target="_blank" rel="noopener noreferrer" class="event-link">ses-india.in &rarr;</a>
+      </div>
+    </article>
+	
+	  
+
+  </div>
+
+<div class="back-to-top-wrap">
+  <a href="#top" class="back-to-top">Top &#8593;</a>
+</div>
+	
+  <hr class="section-divider">
+
+  <!-- OVERSEAS SHOWS -->
+  <div class="subsection" id="overseas-shows">
+    <h3 class="subsection-title">Overseas Shows</h3>
+
+    <article class="event-article">
+      <div class="event-image">
+<a href="https://apexexpo.org" target="_blank" rel="noopener noreferrer">
+		  <img src="images/upcoming-events/overseas-shows/apex-expo-2026-logo.png" alt="APEX EXPO 2026" />
+</a>
+      </div>
+      <div class="event-text">
+        <h4 class="article-heading">APEX EXPO 2026</h4>
+        <p class="event-date">14 - 19 March 2026</p>
+        <p class="event-venue">Anaheim Convention Center, Anaheim, California, USA</p>
+        <a href="https://apexexpo.org" target="_blank" rel="noopener noreferrer" class="event-link">apexexpo.org &rarr;</a>
+      </div>
+    </article>
+
+    <hr>
+
+    <article class="event-article">
+      <div class="event-image">
+<a href="https://www.semiconsea.org" target="_blank" rel="noopener noreferrer">
+		  <img src="images/upcoming-events/overseas-shows/semicon-sea-logo.png" alt="SEMICON Southeast Asia 2026" />
+</a>
+      </div>
+      <div class="event-text">
+        <h4 class="article-heading">SEMICON Southeast Asia 2026</h4>
+        <p class="event-date">05 - 07 May 2026</p>
+        <p class="event-venue">Malaysia International Trade & Exhibition Centre (MITEC), Kuala Lumpur, Malaysia</p>
+        <a href="https://www.semiconsea.org" target="_blank" rel="noopener noreferrer" class="event-link">semiconsea.org &rarr;</a>
+      </div>
+    </article>
+
+    <hr>
+
+    <article class="event-article">
+      <div class="event-image">
+<a href="https://www.computextaipei.com.tw/en/" target="_blank" rel="noopener noreferrer">
+		  <img src="images/upcoming-events/overseas-shows/computex-taipei-logo.png" alt="COMPUTEX Taipei" />
+</a>
+      </div>
+      <div class="event-text">
+        <h4 class="article-heading">COMPUTEX Taipei</h4>
+        <p class="event-date">02 - 05 June 2026</p>
+        <p class="event-venue">Taipei Nangang Exhibition Center, Taipei, Taiwan</p>
+        <a href="https://www.computextaipei.com.tw/en/" target="_blank" rel="noopener noreferrer" class="event-link">computextaipei.com.tw/en &rarr;</a>
+      </div>
+    </article>
+
+    <hr>
+
+   
+
+    <article class="event-article">
+      <div class="event-image">
+<a href="https://dac.com/2026/" target="_blank" rel="noopener noreferrer">
+		  <img src="images/upcoming-events/overseas-shows/dac-logo.png" alt="Design Automation Conference" />
+</a>
+      </div>
+      <div class="event-text">
+        <h4 class="article-heading">Design Automation Conference (DAC)</h4>
+        <p class="event-date">26 - 29 July 2026</p>
+        <p class="event-venue">Long Beach Convention Center, Long Beach, California</p>
+        <a href="https://dac.com/2026/" target="_blank" rel="noopener noreferrer" class="event-link">dac.com/2026 &rarr;</a>
+      </div>
+    </article>
+
+  </div>
+
+</section>
+
+<div class="back-to-top-wrap">
+  <a href="#top" class="back-to-top">Top &#8593;</a>
+</div>
+		
+    </main>
+
+	  
+    <!-- SIDEBAR -->
+<aside id="sidebar">
+	
+<!-- FEATURED SPONSORS GROUP -->
+<div id="featured-sponsors">
+
+  <!-- SOURCE INDIA -->
+  <div class="sidebar-widget">
+    <h3>Visit Source India</h3>
+    <a href="https://sourceindia-electronics.com/" target="_blank" rel="noopener noreferrer">
+      <img src="images/misc/source-india-portal.jpg" alt="Source India" class="sidebar-ad-img">
+    </a>
+  </div>
+
+  <!-- SPONSOR 2 -->
+  <div class="sidebar-widget">
+    <h3>Upcoming ELCINA Events&nbsp;</h3>
+    <a href="https://www.elcina.com/" target="_blank" rel="noopener noreferrer">
+      <img src="images/upcoming-events/domestic-events/electronics-supply-chain-2026.png" alt="Electronics Supply Chain Summit" class="sidebar-ad-img">
+    </a>
+	    <a href="" target="_blank" rel="noopener noreferrer">
+      <img src="images/upcoming-events/domestic-events/bpca-logo.png" alt="Sponsor 2" class="sidebar-ad-img">
+    </a>
+	  <a href="#elcina-events" class="read-more">More ELCINA Events &rarr;</a>
+  </div>
+
+ 
+</div><!-- end featured-sponsors -->
+	
+	 
+	<!-- ADVERTISEMENT -->
+  <div class="sidebar-widget">
+    <h3>Advertisement</h3>
+    <a href="https://www.mouser.in/" target="_blank" rel="noopener noreferrer">
+      <img src="images/misc/Mouser_Dec_31.png" alt="Mouser Electronics" class="sidebar-ad-img">
+    </a>
+  </div>
+
+  <!-- ELCINA PUBLICATION -->
+  <div class="sidebar-widget">
+    <h3>ELCINA Publications</h3>
+
+    <p class="sidebar-pub-title">ELCINA Directory of Indian Electronics Industry - 2025-26</p>
+    <a href="https://elcina.com/elcina-directory-of-indian-electronics-industry" target="_blank" rel="noopener noreferrer">
+      <img src="images/elcina-publications/Directory-2025-26_page-0001.jpg" alt="ELCINA Directory 2025-26" class="sidebar-pub-img">
+    </a>
+    <a href="https://elcina.com/elcina-directory-of-indian-electronics-industry" target="_blank" rel="noopener noreferrer" class="sidebar-btn">Book Now</a>
+
+    <hr class="sidebar-divider">
+
+    <p class="sidebar-pub-title">ELCINA Electronics Outlook</p>
+    <a href="https://elcina.com/elcina-electronics-outlook" target="_blank" rel="noopener noreferrer">
+      <img src="images/elcina-publications/eeo-jul-dec-2025.jpg" alt="ELCINA Electronics Outlook" class="sidebar-pub-img">
+    </a>
+    <a href="https://elcina.com/elcina-electronics-outlook" target="_blank" rel="noopener noreferrer" class="read-more">Read More &rarr;</a>
+
+  </div>
+
+  <!-- ELCINA MEMBERSHIP -->
+  <div class="sidebar-widget">
+    <h3>Become an ELCINA Member</h3>
+    <p>Join an influential network at the forefront of India’s electronics manufacturing transformation. ELCINA welcomes companies creating meaningful value in electronic hardware – including manufacturers of components, sub-assemblies, parts, capital equipment and production machinery, as well as EMS providers, design-led organisations, and specialised testing and quality service firms.&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>Companies across consumer, telecom, IT, defence, industrial, medical, and automotive electronics are invited to apply once they commence manufacturing, assembly, or design activities in India. Shape the future of electronics.</p>
+    <a href="https://elcina.com/membership" target="_blank" rel="noopener noreferrer" class="sidebar-btn">Explore Membership</a>
+
+    <hr class="sidebar-divider">
+
+    <p class="sidebar-small">All membership payments through local cheque/draft favoring:</p>
+    <p class="sidebar-small"><strong>Electronics Industries Association of India</strong></p>
+    <p class="sidebar-small">payable in New Delhi. For enquiries, call:</p>
+    <p class="sidebar-small">Mr. Narendra,<br>
+    ELCINA House,<br>
+    422, Okhla Industrial Estate,<br>
+	Phase III,<br>
+	New Delhi 110 020, India<br>
+    Tel: +91 (11) 41615985, 41011291<br>
+    Email: <a href="mailto:info@elcina.com">info@elcina.com</a></p>
+  </div>
+
+  <!-- ELCINA SERVICES -->
+  <div class="sidebar-widget">
+    <h3>ELCINA Services</h3>
+
+    <p class="sidebar-pub-title">ELCINA Display Centre</p>
+    <img src="images/misc/DisplayCentre1_25.jpg" alt="ELCINA Display Center" class="sidebar-pub-img">
+    <p>ELCINA has recently renovated its Display Centre to meet the changing environment of the Industry. Small size Display booths are made to accommodate more and more companies.</p>
+    <a href="http://www.elcina.com/dpc" target="_blank" rel="noopener noreferrer" class="read-more">More &rarr;</a>
+  </div>
+
+  <!-- 
+  <div class="sidebar-widget">
+    <a href="https://sourceindia-electronics.com/" target="_blank" rel="noopener noreferrer">
+      <img src="Img_Basic/Source-India-logo-New-March2023_1.png" alt="Source India Electronics" class="sidebar-ad-img">
+    </a>
+  </div> 
+SOURCE INDIA LOGO -->
+
+  <!-- PREVIOUS EDITION -->
+  <div class="sidebar-widget">
+    <h3>e-Fortnightly Newsletter: Previous Edition</h3>
+    <ul>
+      <li>
+        <a href="https://elcina.com/assets/newsletters/home-newsletter/15-February-2026/15-February-2026.htm" target="_blank" rel="noopener noreferrer">16-28 February 2026</a>
+      </li>
+    </ul>
+  </div>
+
+	 <div class="sidebar-widget" id="toc-sticky-wrapper">
+  <div id="toc">
+    <h4 class="toc-title">YOUR NEWSLETTER MAP&nbsp;</h4>
+    <ul class="toc-list">
+ <li><a href="#top-stories">Top Stories</a></li>
+<li><a href="#policy-scan">Policy Scan</a></li>
+<li><a href="#industry-scan">Industry Scan</a></li>
+		<li><a href="#general"><span style="margin-left: 15px;">- General</span></a></li>
+		<li><a href="#semiconductors"><span style="margin-left: 15px;">- Semiconductors</span></a></li>
+<li><a href="#information-technology"><span style="margin-left: 15px;">- Information Technology</span></a></li>
+		<li><a href="#consumer-electronics"><span style="margin-left: 15px;">- Consumer Electronics</span></a></li>
+		<li><a href="#telecom"><span style="margin-left: 15px;">- Telecom</span></a></li>
+		<li><a href="#evs-auto"><span style="margin-left: 15px;">- EVs &amp; Auto Electronics</span></a></li>
+		<li><a href="#defence-solar"><span style="margin-left: 15px;">- Defence &amp; Solar</span></a></li>
+<li><a href="#msme"><span style="margin-left: 15px;">- MSME</span></a></li>
+<li><a href="#perspective">Perspective</a></li>
+<li><a href="#publications">Publications</a></li>
+<li><a href="#elcina-events">ELCINA Events</a></li>
+<li><a href="#upcoming-events">Upcoming Events</a></li>
+		<li><a href="#domestic-events"><span style="margin-left: 15px;">- Domestic Events</span></a></li>
+		<li><a href="#overseas-shows"><span style="margin-left: 15px;">- Overseas Shows</span></a></li>
+</ul>
+  </div>
+</div>
+	
+	
+	
+	
+</aside>
+ 
+</div><!-- end wrapper -->
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="footer-inner">
+      <p>The e-Fortnightly Newsletter is published by ELCINA, New Delhi, for private circulation only. While every effort has been made to ensure accuracy, inadvertent errors may have occurred. Readers are advised to independently verify the information.<br><br><strong>Electronic Industries Association of India (ELCINA)</strong><br>
+ELCINA House, 422, Okhla Industrial Estate, Phase III, New Delhi 110020, India<br>
+info@elcina.com | +91 (11) 41615985, 41011291 | www.elcina.com</p>
+ <!-- HIDDEN -- <p><a href="#">Unsubscribe</a> &nbsp;|&nbsp; <a href="#">Privacy Policy</a></p> -->
+    </div>
+  </footer>
+
+  <!-- NAV MENU SCRIPT -->
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById('nav-links');
+      const hamburger = document.getElementById('hamburger');
+      navLinks.classList.toggle('open');
+      hamburger.classList.toggle('active');
+    }
+
+    // Close menu when any link is clicked on mobile
+document.querySelectorAll('#nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    if (window.innerWidth <= 768) {
+      document.getElementById('nav-links').classList.remove('open');
+      document.getElementById('hamburger').classList.remove('active');
+    }
+  });
+});
+
+    document.querySelectorAll('.dropdown > a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          const dropdown = this.parentElement;
+          dropdown.classList.toggle('open');
+        }
+      });
+    });
+	  
+	  // Move featured sponsors group on mobile
+function moveFeaturedSponsors() {
+  var group = document.getElementById('featured-sponsors');
+  var placeholder = document.getElementById('featured-sponsors-placeholder');
+  var sidebar = document.getElementById('sidebar');
+
+  if (window.innerWidth <= 768) {
+    placeholder.appendChild(group);
+  } else {
+    sidebar.insertBefore(group, sidebar.firstChild);
+  }
+}
+
+// Run on page load
+moveFeaturedSponsors();
+
+// Run on window resize
+window.addEventListener('resize', moveFeaturedSponsors);
+  </script>
+
+
+</body>
+</html>
